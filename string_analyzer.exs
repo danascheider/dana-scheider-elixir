@@ -9,6 +9,7 @@ defmodule StringAnalyzer do
 
   def sort_by_frequency(list) do
     Enum.sort(list, &compare_count(list, &1, &2))
+      |> Enum.chunk_by(&(&1))
   end
 
   defp compare_count(list, a, b) do
