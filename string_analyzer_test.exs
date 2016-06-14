@@ -24,4 +24,11 @@ defmodule StringAnalyzerTest do
 
     assert StringAnalyzer.break_down_text(input) == output
   end
+
+  test "sort_by_frequency sorts by frequency" do
+    input  = ["c", "b", "c", "c", "a", "a"]
+    output = ["c", "c", "c", "a", "a", "b"]
+
+    assert StringAnalyzer.sort_by_frequency(input) == output
+  end
 end

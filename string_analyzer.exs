@@ -6,4 +6,12 @@ defmodule StringAnalyzer do
       |> String.split(~r/ /)
       |> Enum.chunk(3, 1)
   end
+
+  def sort_by_frequency(list) do
+    Enum.sort(list, &compare_count(list, &1, &2))
+  end
+
+  defp compare_count(list, a, b) do
+    Enum.count(list, fn(el) -> el == a end) >= Enum.count(list, fn(el) -> el == b end)
+  end
 end
