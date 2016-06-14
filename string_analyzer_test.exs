@@ -27,7 +27,7 @@ defmodule StringAnalyzerTest do
 
   test "sort_by_frequency sorts by frequency" do
     input  = ["c", "b", "c", "c", "a", "a"]
-    output = [["c", "c", "c"], ["a", "a"], ["b"]]
+    output = [{"c", 3}, {"a", 2}, {"b", 1}]
 
     assert StringAnalyzer.sort_by_frequency(input) == output
   end
