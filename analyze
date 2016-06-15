@@ -1,0 +1,7 @@
+#!/usr/bin/env elixir
+
+Code.load_file("cli.exs")
+
+args = System.argv()
+
+Cli.process(args)
